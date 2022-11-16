@@ -13,6 +13,10 @@ public class StateManager : MonoBehaviour
     GameObject gameOverMessage;
     bool isLoading = false;
 
+    [Header("Score")]
+    [SerializeField] GameObject scoreDisplay;
+    [SerializeField] Vector3 scoreDisplayPosition = new(0, 4, 0);
+
     enum GameState {
         TUTORIAL,
         GAME,
@@ -57,6 +61,7 @@ public class StateManager : MonoBehaviour
                     player.EnablePhysics(true);
                     player.GetComponent<Animator>().enabled = true;
                     canMove = true;
+                    Instantiate(scoreDisplay, scoreDisplayPosition, Quaternion.identity);
                     state = GameState.GAME;
                 }
                 break;

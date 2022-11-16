@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] GameObject pipeObject;
     [SerializeField] float waitTime = 5f;
     [SerializeField] float spawnDelay = 1.0f;
-    const float MAX_Y = 3.4f;
+    const float MAX_Y = 2f;
     const float MIN_Y = -1.3f;
     public bool canSpawn = false;
 

@@ -15,12 +15,6 @@ public class ScoreKeeper : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void IncreaseScore()
     {
         audioSource.PlayOneShot(scoreSound);
