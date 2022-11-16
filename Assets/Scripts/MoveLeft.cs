@@ -16,8 +16,7 @@ public class MoveLeft : MonoBehaviour
     {
         startPosition = transform.position;
 #nullable enable
-        BoxCollider2D? collider;
-        TryGetComponent<BoxCollider2D>(out collider);
+        TryGetComponent<BoxCollider2D>(out BoxCollider2D? collider);
         if (collider != null)
         {
             HALF_WIDTH = collider.size.x / 2f;
@@ -29,11 +28,11 @@ public class MoveLeft : MonoBehaviour
     {
         if (!levelManager.canMove) return;
 
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
         if (gameObject.CompareTag("Ground")
-            && transform.position.x < startPosition.x-HALF_WIDTH)
+            && transform.position.x <= startPosition.x-HALF_WIDTH)
         {
-            transform.position = startPosition;
+            transform.position = startPosition - new Vector3(0.1f, 0, 0);
         }
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
     }
 }
