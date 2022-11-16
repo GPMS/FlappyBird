@@ -7,12 +7,12 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     AudioSource audioSource;
-    LevelManager levelManager;
+    StateManager levelManager;
     [SerializeField] AudioClip hitSound;
 
     void Awake()
     {
-        levelManager = FindObjectOfType<LevelManager>();
+        levelManager = FindObjectOfType<StateManager>();
         audioSource = GetComponent<AudioSource>();
     }
 

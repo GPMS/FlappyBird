@@ -5,11 +5,11 @@ public class MoveLeft : MonoBehaviour
     [SerializeField] float speed = 5f;
     float HALF_WIDTH;
     Vector3 startPosition;
-    LevelManager levelManager;
+    StateManager levelManager;
 
     void Awake()
     {
-        levelManager = FindObjectOfType<LevelManager>();
+        levelManager = FindObjectOfType<StateManager>();
     }
 
     void Start()

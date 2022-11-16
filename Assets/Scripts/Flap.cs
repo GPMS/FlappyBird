@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Flap : MonoBehaviour
 {
     const float MAX_Y = 5.5f;
@@ -19,7 +20,7 @@ public class Flap : MonoBehaviour
 
     Animator animator;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
@@ -50,7 +51,7 @@ public class Flap : MonoBehaviour
 
         secondsSinceLast += Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
         {
             if (isHolding)
             {
@@ -64,7 +65,8 @@ public class Flap : MonoBehaviour
                 isHolding = true;
             }
         }
-        else if (Input.GetKeyUp(KeyCode.Space) && isHolding)
+        else if ((Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
+                  && isHolding)
         {
             isHolding = false;
         }
