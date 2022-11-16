@@ -17,10 +17,13 @@ public class Flap : MonoBehaviour
     AudioSource audioSource;
     [SerializeField] AudioClip flapSound;
 
+    Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,7 +34,12 @@ public class Flap : MonoBehaviour
     }
 
     public void EnablePhysics(bool value = true) => rb.simulated = value;
-    public void EnableControls(bool value = true) => controlsEnabled = value;
+
+    public void EnableControls(bool value = true)
+    {
+        animator.enabled = value;
+        controlsEnabled = value;
+    }
 
     /// <summary>
     /// Push up while flying but limit y

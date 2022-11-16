@@ -554,7 +554,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.9738154
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -728,6 +728,7 @@ GameObject:
   - component: {fileID: 1710433867}
   - component: {fileID: 1710433868}
   - component: {fileID: 1710433869}
+  - component: {fileID: 1710433870}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -948,6 +949,26 @@ CircleCollider2D:
   m_Offset: {x: -0.004155576, y: -0.007480055}
   serializedVersion: 2
   m_Radius: 0.13176858
+--- !u!95 &1710433870
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710433862}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 99ce7232161891a428c5e7f6a09471ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2011686584
 GameObject:
   m_ObjectHideFlags: 0
