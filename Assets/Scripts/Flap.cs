@@ -60,6 +60,7 @@ public class Flap : MonoBehaviour
             else if (secondsSinceLast > repeatDelay)
             {
                 audioSource.PlayOneShot(flapSound);
+                animator.SetTrigger("Flap");
                 rb.velocity = Vector2.up * flapSpeed;
                 secondsSinceLast = 0;
                 isHolding = true;
