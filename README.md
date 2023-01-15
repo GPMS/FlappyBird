@@ -12,12 +12,6 @@ Since the focus is on the programming and related functionality of the Engine, I
 - **SPACE** to flap
 - **Hold SPACE** To fly more
 
-## TODO
-- Tutorial
-- StartGame UI
-- Game UI
-- GameOver UI
-
 ## Resources
 - Great learning resource for Unity: https://learn.unity.com/pathway/junior-programmer
 - Assets: https://github.com/samuelcust/flappy-bird-assets
